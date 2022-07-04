@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'logo', 'phone', 'address', 'contact_person', 'about'
     ];
 
     /**
@@ -36,4 +36,44 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function levels()
+    {
+        return $this->hasMany(Level::class);
+    }
+
+    public function employees()
+    {
+        return $this->hasMany(Employee::class);
+    }
+
+    public function admins()
+    {
+        return $this->belongsToMany(Admin::class, 'admin_users');
+    }
+
+    public function accidentInvestigationReport()
+    {
+        return $this->hasMany(AccidentInvestigationReport::class, 'auth_client_id');
+    }
+
+    public function workerSite()
+    {
+        return $this->hasMany(WorkerSiteForm::class, 'auth_client_id');
+    }
+
+    public function accidentReportForm()
+    {
+        return $this->hasMany(AccidentReportForm::class, 'auth_client_id');
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
+    public function assignLevels()
+    {
+        return $this->hasMany(AssignLevel::class);
+    }
 }

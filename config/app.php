@@ -171,10 +171,15 @@ return [
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
+        // Barryvdh\DomPDF\ServiceProvider::class,
+        App\Providers\ViewServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
+        // Yajra\DataTables\DataTablesServiceProvider::class,
+        // Yajra\DataTables\HtmlServiceProvider::class,
+        // Yajra\DataTables\ButtonsServiceProvider::class,
+        // Yajra\DataTables\EditorServiceProvider::class,
     ],
 
     /*
@@ -226,7 +231,9 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        // 'PDF' => Barryvdh\DomPDF\Facade::class,
+        // 'DataTables' => Yajra\DataTables\Facades\DataTables::class,
+        'Carbon' => 'Carbon\Carbon',
     ],
 
 ];
