@@ -24,15 +24,25 @@ class PageController extends Controller
     {
         return view('frontend.pages.home');
     }
-    public function about()
+    public function aboutUs()
     {
-        return view('frontend.pages.about');
+        return view('frontend.pages.about-us');
+    }
+
+    public function portfolio()
+    {
+        return view('frontend.pages.portfolio');
     }
 
     public function service()
     {
         $services = Service::latest()->get();
         return view('frontend.pages.services', compact('services'));
+    }
+
+    public function serviceDetails()
+    {
+        return view('frontend.pages.service-detail');
     }
 
     public function blog()
@@ -43,8 +53,8 @@ class PageController extends Controller
 
     public function blogDetails(Blog $blog)
     {
-        $relatedBlogs = Blog::where('id', '!=', $blog->id)->take(4)->get();
-        return view('frontend.pages.blog-details', compact('blog', 'relatedBlogs'));
+        // $relatedBlogs = Blog::where('id', '!=', $blog->id)->take(4)->get();
+        return view('frontend.pages.blog-detail');
     }
 
     public function latestNews()
@@ -55,14 +65,14 @@ class PageController extends Controller
 
     public function latestNewsDetails(LatestNew $latestNew)
     {
-        $relatedLatestNews = LatestNew::where('id', '!=', $latestNew->id)->take(4)->get();
-        return view('frontend.pages.latest-news-details', compact('relatedLatestNews', 'latestNew'));
+        // $relatedLatestNews = LatestNew::where('id', '!=', $latestNew->id)->take(4)->get();
+        return view('frontend.pages.latest-news-detail');
     }
 
-    public function careers()
+    public function jobs()
     {
         $careers = Career::latest()->get();
-        return view('frontend.pages.careers', compact('careers'));
+        return view('frontend.pages.jobs', compact('careers'));
     }
 
     public function careerJob(Career $career)

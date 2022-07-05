@@ -460,165 +460,136 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid iq-hide">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 text-center">
-                    <div class="isotope-filters">
-                        <button data-filter="" class="active">All</button>
-                        <button data-filter=".photography">photography</button>
-                        <button data-filter=".branding">branding</button>
-                        <button data-filter=".webdesign">Web design</button>
-                        <button data-filter=".illustration">illustration</button>
-                    </div>
                     <div class="isotope iq-columns-4">
                         <div class="iq-grid-item photography">
-                            <div class="iq-portfolio-01">
-                                <div class="iq-portfolio-img">
-                                    <img src="images/portfolio/grid/01.jpg" alt="#">
-                                </div>
+                            <div class="iq-portfolio-03">
+                                <a class="iq-portfolio-img" href="#">
+                                        <img class="img-fluid" src="images/portfolio/grid/01.jpg" alt="#">
+                                    </a>
                                 <div class="iq-portfolio-content">
-                                    <a href="portfolio-single-1.html" class="title">Portfolio Dashboard</a>
-                                    <a href="#">Web Design /</a> <a href="#">Graphic</a>
-                                </div>
-                                <ul class="iq-portfolio-icon">
+                                    
+                                    <h5 class="title iq-font-white"><a href="portfolio-single-1.html">Portfolio Dashboard</a></h5>
+                                    <span class="category iq-font-white"><a href="#">Web Design</a> | <a href="#">Graphic</a></span>
+                                    <ul class="iq-portfolio-icon">
                                     <li><a href="portfolio-single-1.html"><i class="fa fa-link"></i></a></li>
                                     <li><a class="image-link popup-img" href="images/portfolio/grid/01.jpg"><i class="fa fa-arrows-alt"></i></a></li>
                                 </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="iq-grid-item branding">
-                            <div class="iq-portfolio-01">
-                                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                                    <ol class="carousel-indicators">
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                    </ol>
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img class="d-block w-100" src="images/portfolio/grid/02.jpg" alt="First slide">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="images/portfolio/grid/03.jpg" alt="Second slide">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="images/portfolio/grid/04.jpg" alt="Third slide">
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="iq-portfolio-03">
+                                <a class="iq-portfolio-img" href="#">
+                                        <img class="img-fluid" src="images/portfolio/grid/02.jpg" alt="#">
+                                    </a>
                                 <div class="iq-portfolio-content">
-                                    <a href="portfolio-single-1.html" class="title">Portfolio Dashboard</a>
-                                    <a href="#">Web Design /</a> <a href="#">Graphic</a>
-                                </div>
-                                <ul class="iq-portfolio-icon">
+                                    
+                                    <h5 class="title iq-font-white"><a href="portfolio-single-1.html">Portfolio Dashboard</a></h5>
+                                    <span class="category iq-font-white"><a href="#">Web Design</a> | <a href="#">Graphic</a></span>
+                                    <ul class="iq-portfolio-icon">
                                     <li><a href="portfolio-single-1.html"><i class="fa fa-link"></i></a></li>
                                     <li><a class="image-link popup-img" href="images/portfolio/grid/02.jpg"><i class="fa fa-arrows-alt"></i></a></li>
                                 </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="iq-grid-item webdesign">
-                            <div class="iq-portfolio-01">
-                                <div class="iq-portfolio-img">
-                                    <img src="images/portfolio/grid/03.jpg" alt="#">
-                                </div>
+                            <div class="iq-portfolio-03">
+                                <a class="iq-portfolio-img" href="#">
+                                        <img class="img-fluid" src="images/portfolio/grid/03.jpg" alt="#">
+                                    </a>
                                 <div class="iq-portfolio-content">
-                                    <a href="portfolio-single-1.html" class="title">Portfolio Dashboard</a>
-                                    <a href="#">Web Design /</a> <a href="#">Graphic</a>
-                                </div>
-                                <ul class="iq-portfolio-icon">
+                                    
+                                    <h5 class="title iq-font-white"><a href="portfolio-single-1.html">Portfolio Dashboard</a></h5>
+                                    <span class="category iq-font-white"><a href="#">Web Design</a> | <a href="#">Graphic</a></span>
+                                    <ul class="iq-portfolio-icon">
                                     <li><a href="portfolio-single-1.html"><i class="fa fa-link"></i></a></li>
                                     <li><a class="image-link popup-img" href="images/portfolio/grid/03.jpg"><i class="fa fa-arrows-alt"></i></a></li>
                                 </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="iq-grid-item illustration">
-                            <div class="iq-portfolio-01">
-                                <div class="iq-portfolio-img">
-                                    <img src="images/portfolio/grid/04.jpg" alt="#">
-                                </div>
+                            <div class="iq-portfolio-03">
+                                <a class="iq-portfolio-img" href="#">
+                                        <img class="img-fluid" src="images/portfolio/grid/04.jpg" alt="#">
+                                    </a>
                                 <div class="iq-portfolio-content">
-                                    <a href="portfolio-single-1.html" class="title">Portfolio Dashboard</a>
-                                    <a href="#">Web Design /</a> <a href="#">Graphic</a>
-                                </div>
-                                <ul class="iq-portfolio-icon">
+                                    
+                                    <h5 class="title iq-font-white"><a href="portfolio-single-1.html">Portfolio Dashboard</a></h5>
+                                    <span class="category iq-font-white"><a href="#">Web Design</a> | <a href="#">Graphic</a></span>
+                                    <ul class="iq-portfolio-icon">
                                     <li><a href="portfolio-single-1.html"><i class="fa fa-link"></i></a></li>
                                     <li><a class="image-link popup-img" href="images/portfolio/grid/04.jpg"><i class="fa fa-arrows-alt"></i></a></li>
                                 </ul>
+                                </div>
                             </div>
                         </div>
-                        <div class="iq-grid-item branding">
-                            <div class="iq-portfolio-01">
-                                <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
-                                    <ol class="carousel-indicators">
-                                        <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
-                                        <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
-                                        <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
-                                    </ol>
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img class="d-block w-100" src="images/portfolio/grid/05.jpg" alt="First slide">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="images/portfolio/grid/06.jpg" alt="Second slide">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="images/portfolio/grid/07.jpg" alt="Third slide">
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="iq-grid-item photography">
+                            <div class="iq-portfolio-03">
+                                <a class="iq-portfolio-img" href="#">
+                                        <img class="img-fluid" src="images/portfolio/grid/05.jpg" alt="#">
+                                    </a>
                                 <div class="iq-portfolio-content">
-                                    <a href="portfolio-single-1.html" class="title">Portfolio Dashboard</a>
-                                    <a href="#">Web Design /</a> <a href="#">Graphic</a>
-                                </div>
-                                <ul class="iq-portfolio-icon">
+                                    
+                                    <h5 class="title iq-font-white"><a href="portfolio-single-1.html">Portfolio Dashboard</a></h5>
+                                    <span class="category iq-font-white"><a href="#">Web Design</a> | <a href="#">Graphic</a></span>
+                                    <ul class="iq-portfolio-icon">
                                     <li><a href="portfolio-single-1.html"><i class="fa fa-link"></i></a></li>
                                     <li><a class="image-link popup-img" href="images/portfolio/grid/05.jpg"><i class="fa fa-arrows-alt"></i></a></li>
                                 </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="iq-grid-item webdesign">
-                            <div class="iq-portfolio-01">
-                                <div class="iq-portfolio-img">
-                                    <img src="images/portfolio/grid/06.jpg" alt="#">
-                                </div>
+                            <div class="iq-portfolio-03">
+                                <a class="iq-portfolio-img" href="#">
+                                        <img class="img-fluid" src="images/portfolio/grid/06.jpg" alt="#">
+                                    </a>
                                 <div class="iq-portfolio-content">
-                                    <a href="portfolio-single-1.html" class="title">Portfolio Dashboard</a>
-                                    <a href="#">Web Design /</a> <a href="#">Graphic</a>
-                                </div>
-                                <ul class="iq-portfolio-icon">
+                                    
+                                    <h5 class="title iq-font-white"><a href="portfolio-single-1.html">Portfolio Dashboard</a></h5>
+                                    <span class="category iq-font-white"><a href="#">Web Design</a> | <a href="#">Graphic</a></span>
+                                    <ul class="iq-portfolio-icon">
                                     <li><a href="portfolio-single-1.html"><i class="fa fa-link"></i></a></li>
                                     <li><a class="image-link popup-img" href="images/portfolio/grid/06.jpg"><i class="fa fa-arrows-alt"></i></a></li>
                                 </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="iq-grid-item branding">
-                            <div class="iq-portfolio-01">
-                                <div class="iq-portfolio-img">
-                                    <img src="images/portfolio/grid/07.jpg" alt="#">
-                                </div>
+                            <div class="iq-portfolio-03">
+                                <a class="iq-portfolio-img" href="#">
+                                        <img class="img-fluid" src="images/portfolio/grid/07.jpg" alt="#">
+                                    </a>
                                 <div class="iq-portfolio-content">
-                                    <a href="portfolio-single-1.html" class="title">Portfolio Dashboard</a>
-                                    <a href="#">Web Design /</a> <a href="#">Graphic</a>
-                                </div>
-                                <ul class="iq-portfolio-icon">
+                                    
+                                    <h5 class="title iq-font-white"><a href="portfolio-single-1.html">Portfolio Dashboard</a></h5>
+                                    <span class="category iq-font-white"><a href="#">Web Design</a> | <a href="#">Graphic</a></span>
+                                    <ul class="iq-portfolio-icon">
                                     <li><a href="portfolio-single-1.html"><i class="fa fa-link"></i></a></li>
                                     <li><a class="image-link popup-img" href="images/portfolio/grid/07.jpg"><i class="fa fa-arrows-alt"></i></a></li>
                                 </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="iq-grid-item illustration">
-                            <div class="iq-portfolio-01">
-                                <div class="iq-portfolio-img">
-                                    <img src="images/portfolio/grid/08.jpg" alt="#">
-                                </div>
+                            <div class="iq-portfolio-03">
+                                <a class="iq-portfolio-img" href="#">
+                                        <img class="img-fluid" src="images/portfolio/grid/08.jpg" alt="#">
+                                    </a>
                                 <div class="iq-portfolio-content">
-                                    <a href="portfolio-single-1.html" class="title">Portfolio Dashboard</a>
-                                    <a href="#">Web Design /</a> <a href="#">Graphic</a>
-                                </div>
-                                <ul class="iq-portfolio-icon">
+                                    
+                                    <h5 class="title iq-font-white"><a href="portfolio-single-1.html">Portfolio Dashboard</a></h5>
+                                    <span class="category iq-font-white"><a href="#">Web Design</a> | <a href="#">Graphic</a></span>
+                                    <ul class="iq-portfolio-icon">
                                     <li><a href="portfolio-single-1.html"><i class="fa fa-link"></i></a></li>
                                     <li><a class="image-link popup-img" href="images/portfolio/grid/08.jpg"><i class="fa fa-arrows-alt"></i></a></li>
                                 </ul>
+                                </div>
                             </div>
                         </div>
                     </div>

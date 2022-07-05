@@ -25,25 +25,24 @@ Auth::routes();
 
 Route::group(["namespace" => "Frontend"], function () {
     Route::get('/', 'PageController@index')->name('pages.home');
-    Route::get('/about/who-we-are', 'PageController@about')->name('pages.about');
-
     Route::get('/services', 'PageController@service')->name('pages.services');
+    Route::get('/service/detail', 'PageController@serviceDetails')->name('pages.service-details');
 
     Route::get('/blogs', 'PageController@blog')->name('pages.blogs');
-    Route::get('/blog/{blog:slug}/details', 'PageController@blogDetails')->name('pages.blog-details');
+    Route::get('/blog/detail', 'PageController@blogDetails')->name('pages.blog-details');
 
-    Route::get('/projects/{city:slug}', 'PageController@project')->name('pages.projects');
-    Route::get('/project/{project:slug}/details', 'PageController@projectDetails')->name('pages.project-details');
+    Route::get('/portfolio', 'PageController@portfolio')->name('pages.portfolio');
+
 
     Route::get('/latest-news', 'PageController@latestNews')->name('pages.latest-news');
-    Route::get('/latest-news/{latestNew:slug}/details', 'PageController@latestNewsDetails')->name('pages.latest-news-details');
+    Route::get('/latest-news/details', 'PageController@latestNewsDetails')->name('pages.latest-news-details');
 
     Route::get('/careers', 'PageController@careers')->name('pages.careers');
     Route::get('/careers/{career:slug}/job', 'PageController@careerJob')->name('pages.careers-job');
     Route::post('/careers/{career:slug}/job/apply', 'PageController@careerJobApply')->name('pages.careers-job-apply');
 
-    Route::get('/maps', 'PageController@maps')->name('pages.maps');
-    Route::get('/map/{map}/view', 'PageController@mapDetail')->name('pages.map-detail');
+    Route::get('/jobs', 'PageController@jobs')->name('pages.jobs');
+    Route::get('/about-us', 'PageController@aboutUs')->name('pages.about-us');
 
     Route::get('/contact-us', 'PageController@contactUs')->name('pages.contact-us');
     Route::post('/contact-enquiry', 'PageController@contactEnquiry')->name('pages.contact-enquiry');
