@@ -1,4 +1,4 @@
-<header class="header-01 re-none">
+<header class="header-01 white re-none">
     <!-- menu start -->
     <nav id="menu-1" class="mega-menu">
         <!-- menu list items container -->
@@ -9,8 +9,8 @@
                         <!-- menu links -->
                         <ul class="menu-logo">
                             <li>
-                                <a href="index.html">
-                                    <img id="logo_img" src="{{ asset('images/logo.png') }}" alt="logo">
+                                <a href="{{ route('pages.home') }}">
+                                    <img id="logo_img" src="{{ asset('images/sje.png') }}" alt="logo">
                                 </a>
                             </li>
                         </ul>
@@ -20,15 +20,19 @@
                             <li><a href="{{ route('pages.services') }}">Services <i class="fa fa-angle-right fa-indicator"></i></a>
                                 <!-- drop down multilevel  -->
                                 <ul class="drop-down-multilevel">
-                                    <li><a href="{{ route('pages.services') }}">Header Style</a>
-                                    </li>
+                                    @foreach ($services as $service)
+                                        <li><a href="{{ route('pages.service-details', $service->slug) }}">{{ $service->title }}</a>
+                                        </li>
+                                    @endforeach
                                 </ul>
                             </li>
                             <li><a href="{{ route('pages.jobs') }}">Hire Developers <i class="fa fa-angle-right fa-indicator"></i></a>
                                 <!-- drop down multilevel  -->
                                 <ul class="drop-down-multilevel">
-                                    <li><a href="{{ route('pages.jobs') }}">Header Style</a>
-                                    </li>
+                                    @foreach ($careers as $career)
+                                        <li><a href="{{ route('pages.job-details', $career->slug) }}">{{ $career->title }}</a>
+                                        </li>
+                                    @endforeach
                                 </ul>
                             </li>
                             <li><a href="javascript:void(0)">Contact Hub <i class="fa fa-angle-right fa-indicator"></i></a>

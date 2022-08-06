@@ -63,7 +63,7 @@
                                 <div class="col-12 col-md-12">
                                     <div class="form-group">
                                         <label class="@error('description') text-danger @enderror">Description <span style="color:red">*</span></label>
-                                        <textarea class="@error('description') text-danger @enderror form-control" name="description">{{ old('description') }}</textarea>
+                                        <textarea class="tinymce @error('description') text-danger @enderror form-control" name="description">{{ old('description') }}</textarea>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-12">

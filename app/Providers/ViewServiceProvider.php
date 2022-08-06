@@ -5,7 +5,8 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 use App\GeneralSetting;
-
+use App\Career;
+use App\Service;
 class ViewServiceProvider extends ServiceProvider
 {
     /**
@@ -27,7 +28,9 @@ class ViewServiceProvider extends ServiceProvider
     {
         View::composer(['layouts.*', 'admin.*', '*'], function ($view) {
             $settings = GeneralSetting::first();
-            $view->with(compact('settings'));
+            $careers = Career::latest()->get();
+            $services = Service::latest()->get();
+            $view->with(compact('settings', 'careers', 'services'));
         });
     }
 }

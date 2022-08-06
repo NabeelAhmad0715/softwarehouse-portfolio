@@ -43,6 +43,7 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
+                                        <th>Icon</th>
                                         <th>Title</th>
                                         <th>Location</th>
                                         <th>Job Type</th>
@@ -53,6 +54,9 @@
                                     @forelse ($careers as $key => $career)
                                     <tr>
                                         <td>{{ ++$key }}</td>
+                                        <td>
+                                            <img height="80px" style="border-radius:20px" src="{{ asset('/storage/' . $career->icon) }}" />
+                                        </td>
                                         <td>{{ $career->title }}</td>
                                         <td>{{ $career->location }}</td>
                                         <td>{{ $career->job_type }}</td>

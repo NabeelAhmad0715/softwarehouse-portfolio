@@ -26,24 +26,55 @@ Auth::routes();
 Route::group(["namespace" => "Frontend"], function () {
     Route::get('/', 'PageController@index')->name('pages.home');
     Route::get('/services', 'PageController@service')->name('pages.services');
-    Route::get('/service/detail', 'PageController@serviceDetails')->name('pages.service-details');
+    Route::get('/service/{service:slug}', 'PageController@serviceDetails')->name('pages.service-details');
 
     Route::get('/blogs', 'PageController@blog')->name('pages.blogs');
-    Route::get('/blog/detail', 'PageController@blogDetails')->name('pages.blog-details');
+    Route::get('/blog/{blog:slug}', 'PageController@blogDetails')->name('pages.blog-details');
 
     Route::get('/portfolio', 'PageController@portfolio')->name('pages.portfolio');
 
 
     Route::get('/latest-news', 'PageController@latestNews')->name('pages.latest-news');
-    Route::get('/latest-news/details', 'PageController@latestNewsDetails')->name('pages.latest-news-details');
+    Route::get('/latest-news/{latestNew:slug}', 'PageController@latestNewsDetails')->name('pages.latest-news-details');
 
-    Route::get('/careers', 'PageController@careers')->name('pages.careers');
+    Route::get('/jobs', 'PageController@jobs')->name('pages.jobs');
+    Route::get('/jobs/{career:slug}', 'PageController@jobDetails')->name('pages.job-details');
     Route::get('/careers/{career:slug}/job', 'PageController@careerJob')->name('pages.careers-job');
     Route::post('/careers/{career:slug}/job/apply', 'PageController@careerJobApply')->name('pages.careers-job-apply');
 
-    Route::get('/jobs', 'PageController@jobs')->name('pages.jobs');
     Route::get('/about-us', 'PageController@aboutUs')->name('pages.about-us');
 
     Route::get('/contact-us', 'PageController@contactUs')->name('pages.contact-us');
-    Route::post('/contact-enquiry', 'PageController@contactEnquiry')->name('pages.contact-enquiry');
+    Route::post('/contact/form-submit', 'PageController@contactEnquiry')->name('pages.contact-form-submit');
+
+});
+
+Route::get('/create-symlink', function () {
+    $projectFolder = base_path() . '/../';
+    // The file that you want to create a symlink of
+    $source = $projectFolder . "/fRjgrudetTGf/storage/app/public";
+    // The path where you want to create the symlink of the above
+    $destination = $projectFolder . "/storage";
+
+    if (file_exists($destination)) {
+        if (is_link($destination)) {
+            return "<h1>Symlink already exists</h1>";
+        }
+    } else {
+        symlink($source, $destination);
+        return "<h1>Symlink created successfully</h1>";
+    }
+});
+
+Route::get('/remove-symlink', function () {
+    $projectFolder = base_path() . '/../';
+    $destination = $projectFolder . "/storage";
+    if (file_exists($destination)) {
+        if (is_link($destination)) {
+            unlink($destination);
+            return "<h1>Removed symlink</h1>";
+        }
+    } else {
+        return "<h1>Symlink does not exist</h1>";
+    }
 });

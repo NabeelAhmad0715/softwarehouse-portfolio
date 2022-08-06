@@ -76,13 +76,19 @@
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <label class="@error('published_date') text-danger @enderror">Published Date <span style="color:red">*</span> </label>
-                                        <input type="date" class="@error('published_date') border-danger @enderror form-control" value="{{ old('published_date', $blog->published_date) }}" name="published_date" required >
+                                        <input type="date" class="@error('published_date') border-danger @enderror form-control" value="{{ old('published_date', $blog->published_date->format('Y-m-d')) }}" name="published_date" required >
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-12">
                                     <div class="form-group">
                                         <label class="@error('location') text-danger @enderror">Location <span style="color:red">*</span> </label>
                                         <input class="@error('location') text-danger @enderror tinymce form-control" name="location" value="{{ old('location',$blog->location) }}" />
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-12">
+                                    <div class="form-group">
+                                        <label class="@error('description') text-danger @enderror">Description <span style="color:red">*</span> </label>
+                                        <textarea class="@error('description') text-danger @enderror tinymce form-control" name="description">{{ old('description',$blog->description) }}</textarea>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-12">

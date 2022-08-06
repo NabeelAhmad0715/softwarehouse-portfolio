@@ -1,6 +1,6 @@
 
 /*
-Qwilo - Multipurpose Responsive HTML5 Template
+Cloudily - Multipurpose Responsive HTML5 Template
 Author: iqonicthemes.in
 Version: 1.0
 Design and Developed by: iqonicthemes.in
@@ -738,7 +738,7 @@ border-radius: 100px; -webkit-transition: all 0.3s; transition: all 0.3s; -webki
 .slideouticons input:checked ~ .iconswrapper { visibility: visible; }
 
 /*Header Dark Transparent*/
-header.dark-transparent .mega-menu>section.menu-list-items { background: rgba(34, 34, 34, 0.4); }
+header.dark-transparent .mega-menu>section.menu-list-items { background: rgba(34, 34, 34, 0.8); }
 header.dark-transparent .mega-menu.desktopTopFixed .menu-list-items { background: rgba(34, 34, 34, 0.8); }
 
 /*Header Dark Boder*/
@@ -2696,7 +2696,7 @@ Footer 4
 .iq-footer4 .footer-top { background: #242424; }
 .iq-footer4 { color: #fff; }
 .iq-footer4 hr { margin: 0; border-top: 0px; padding: 0px; border-bottom: 1px solid #323232; }
-.iq-footer4 .logo img { width: 200px; }
+.iq-footer4 .logo img { width: 100px; }
 
 /*Menu*/
 .iq-footer4 .menu li { display: block; border-bottom: 0px; margin-bottom: 10px; line-height: 24px; padding: 0; }

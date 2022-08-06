@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Career;
-
+use Illuminate\Support\Facades\Storage;
 class CareerController extends Controller
 {
     /**
@@ -41,11 +41,17 @@ class CareerController extends Controller
             'job_type' => ['required', 'string', 'max:255'],
             'job_category' => ['required', 'string', 'max:255'],
             'location' => ['required', 'string', 'max:255'],
+            'icon' => ['required', 'image'],
             'description' => ['required', 'string'],
             'meta_title' => ['nullable', 'string', 'max:255'],
             'meta_keywords' => ['nullable', 'string'],
             'meta_description' => ['nullable', 'string'],
         ]);
+
+        $icon = $request->file('icon');
+        $filename = Str::random(15) . '.' . $icon->extension();
+        Storage::putFileAs("public", $icon, $filename);
+        $data['icon'] = $filename;
 
         $data['slug'] = Str::slug($data['title'], '-');
         Career::Create($data);
@@ -79,10 +85,18 @@ class CareerController extends Controller
             'job_category' => ['required', 'string', 'max:255'],
             'location' => ['required', 'string', 'max:255'],
             'description' => ['required', 'string'],
+            'icon' => ['nullable', 'image'],
             'meta_title' => ['nullable', 'string', 'max:255'],
             'meta_keywords' => ['nullable', 'string'],
             'meta_description' => ['nullable', 'string'],
         ]);
+
+        if ($request->file('icon')) {
+            $icon = $request->file('icon');
+            $filename = Str::random(15) . '.' . $icon->extension();
+            Storage::putFileAs("public", $icon, $filename);
+            $data['icon'] = $filename;
+        }
 
         $career->Update($data);
         return redirect()->route('careers.index')->with('success', 'Career updated successfully.');

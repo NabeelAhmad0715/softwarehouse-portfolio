@@ -74,6 +74,12 @@
                                 </div>
                                 <div class="col-12 col-md-12">
                                     <div class="form-group">
+                                        <label class="@error('description') text-danger @enderror">Description <span style="color:red">*</span> </label>
+                                        <textarea class="@error('description') text-danger @enderror tinymce form-control" name="description">{{ old('description') }}</textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-12">
+                                    <div class="form-group">
                                         <label class="@error('meta_title') text-danger @enderror">Meta Title</label>
                                         <input class="@error('meta_title') body-danger @enderror form-control" value="{{ old('meta_title') }}" name="meta_title">
                                     </div>

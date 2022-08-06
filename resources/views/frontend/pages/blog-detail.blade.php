@@ -1,27 +1,27 @@
 @extends('frontend.layouts.layout')
 
 @section('head')
-<title>Contact us | Titanium</title>
-<meta name="description" content="Titanium">
-<meta name="keywords" content="Titanium">
+<title>Blogs | {{ $blog->title }} | Cloudily</title>
+<meta name="description" content="Cloudily">
+<meta name="keywords" content="Cloudily">
 
 @endsection
 
 @section('content')
  <!--======= Breadcrumb Left With BG Image =======-->
- <section class="overview-block-ptb iq-over-black-70 jarallax iq-breadcrumb3 text-left iq-font-white" style="background-image: url('images/bg/03.jpg'); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+ <section class="overview-block-ptb iq-over-black-70 jarallax iq-breadcrumb3 text-left iq-font-white" style="background-image: url('{{ asset('/storage/' . $blog->featured_image) }}'); background-position: center center; background-repeat: no-repeat; background-size: cover;">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-8">
                 <div class="iq-mb-0">
-                    <h2 class="iq-font-white iq-tw-6">Contact Us</h2>
+                    <h2 class="iq-font-white iq-tw-6">Blogs | {{ $blog->title }}</h2>
                 </div>
             </div>
             <div class="col-lg-4">
                 <nav aria-label="breadcrumb" class="text-right">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="home-1.html"><i class="ion-android-home"></i> Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Contact Us 2</li>
+                        <li class="breadcrumb-item"><a href="{{ route('pages.home') }}"><i class="ion-android-home"></i> Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Blogs > {{ $blog->title }}</li>
                     </ol>
                 </nav>
             </div>
@@ -39,34 +39,22 @@
                             <div class="iq-blog-detail">
                                 <div class="iq-entry-title iq-mb-10 iq-mt-10">
                                     <a href="#">
-                                        <h5 class="iq-tw-6">Blogpost With Image</h5>
+                                        <h5 class="iq-tw-6">{{ $blog->title }}</h5>
                                     </a>
                                 </div>
                                 <ul class="iq-entry-meta iq-mt-10">
-                                    <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Qwilo</a></li>
-                                    <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i> 6 like</a></li>
-                                    <li><a href="#"><i class="fa fa-comments" aria-hidden="true"></i> 9 comments</a></li>
+                                    <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> {{ $blog->location }}</a></li>
+                                    <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> {{ $blog->published_date->format('d F y') }}</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="iq-entry-image clearfix">
-                            <div class="owl-carousel arrow-1" data-autoplay="true" data-loop="true" data-nav="true" data-dots="false" data-items="1" data-items-laptop="1" data-items-tab="1" data-items-mobile="1" data-items-mobile-sm="1" data-margin="15">
-                                <div class="item">
-                                    <img class="img-fluid" src="{{ asset('images/blog/02.jpg') }}" alt="#">
-                                </div>
-                                <div class="item">
-                                    <img class="img-fluid" src="{{ asset('images/blog/02.jpg') }}" alt="#">
-                                </div>
-                            </div>
-                            <span class="tag"><i class="ion-image"></i> Photos</span>
-                            <span class="date">12<small>Aug</small></span>
+                            <img class="img-fluid" src="{{ asset('/storage/' . $blog->body_image) }}" alt="#">
                         </div>
                         <div class="iq-pos-r">
                             <div class="iq-blog-detail">
                                 <div class="iq-entry-content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                    <p class="typo-style1">Dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                    {!! $blog->description !!}
                                 </div>
                             </div>
                         </div>
@@ -75,5 +63,65 @@
             </div>
         </div>
     </section>
+    @if (count($blog->sections))
+        <div class="overview-block-ptb iq-hide grey-bg">
+            <div class="container">
+                @foreach ($blog->sections as $index => $section)
+                    @if (!$section->image)
+                    <div class="row iq-mt-50">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="iq-feature7 wow fadeInLeft" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInLeft;">
+                                <div class="feature-aria">
+                                    <div class="feature-content">
+                                        <h3 class="iq-font-dark iq-tw-6 iq-mb-10 iq-re-9-mt30">{{ $section->title }}</h3>
+                                        {!! $section->description !!}                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                    @else
+                        @if ($index % 2 === 0)
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="feature-aria">
+                                        <img class="img-fluid wow fadeInLeft" data-wow-duration="1s" src="{{ asset('/storage/'. $section->image) }}" alt="" style="visibility: visible; animation-duration: 1s; animation-name: fadeInLeft;">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="iq-feature7 wow fadeInRight" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInRight;">
+                                        <div class="feature-aria">
+                                            <div class="feature-content">
+                                                <h3 class="iq-font-dark iq-tw-6 iq-mb-10 iq-re-9-mt30">{{ $section->title }}</h3>
+                                                {!! $section->description !!}                                    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @else
+                            <div class="row iq-mt-50">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="iq-feature7 wow fadeInLeft" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInLeft;">
+                                        <div class="feature-aria">
+                                            <div class="feature-content">
+                                                <h3 class="iq-font-dark iq-tw-6 iq-mb-10 iq-re-9-mt30">{{ $section->title }}</h3>
+                                                {!! $section->description !!}                                    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12 iq-re-9-mt30">
+                                    <div class="feature-aria">
+                                        <img class="img-fluid wow fadeInRight" data-wow-duration="1s" src="{{ asset('/storage/'. $section->image) }}" alt="" style="visibility: visible; animation-duration: 1s; animation-name: fadeInLeft;">
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                    @endif
+                @endforeach
+            </div>
+        </div>
+    @endif
 </div>
 @endsection

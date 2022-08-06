@@ -31,6 +31,24 @@
                             <div class="row form-row">
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
+                                        <div class="change-avatar">
+                                            <div class="profile-img" style="margin-bottom:20px;">
+                                                @if($career->icon)
+                                                    <img height="150" src="{{ asset('/storage/' . $career->icon) }}" alt="User icon">
+                                                @endif
+                                            </div>
+                                            <div class="upload-img">
+                                                <div class="change-photo-btn">
+                                                    <span class="@error('icon') text-danger @enderror"><i class="fa fa-upload"></i> Upload Icon <span style="color:red">*</span> </span>
+                                                    <input type="file" class="@error('icon') text-danger @enderror upload form-control" name="icon">
+                                                </div>
+                                                <small class="form-text text-muted">Allowed JPG, GIF or PNG. Max size of 2MB</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
                                         <label class="@error('title') text-danger @enderror">Title <span style="color:red">*</span> </label>
                                         <input type="text" class="@error('title') border-danger @enderror form-control" name="title" value="{{ old('title', $career->title) }}" required >
                                     </div>

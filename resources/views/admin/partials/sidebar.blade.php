@@ -11,29 +11,6 @@
                         <span>Dashboard</span>
                     </a>
                 </li>
-                {{-- <li class="submenu" >
-                    <a href="#" class="{{ (request()->routeIs('users.*')) ? 'active' : '' }} {{ (request()->routeIs('admin.users.change-password')) ? 'active' : '' }}" >
-                        <i class="fe fe-user"></i>
-                        <span>Users</span>
-                        <span class="menu-arrow"></span>
-                    </a>
-                    <ul style="display: none;">
-                        <li><a class="{{ (request()->routeIs('users.create')) ? 'active' : '' }}" href="{{ route('users.create') }}">Add A New User</a></li>
-                        <li><a class="{{ (request()->routeIs('users.index')) ? 'active' : '' }}" href="{{ route('users.index') }}">View All Users</a></li>
-                    </ul>
-                </li> --}}
-                
-                <li class="submenu" >
-                    <a href="#" class="{{ (request()->routeIs('industries.*')) ? 'active' : '' }}" >
-                        <i class="fas fa-project-diagram" style='font-size:19px'></i>
-                        <span>Industries</span>
-                        <span class="menu-arrow"></span>
-                    </a>
-                    <ul style="display: none;">
-                        <li><a class="{{ (request()->routeIs('industries.create')) ? 'active' : '' }}" href="{{ route('industries.create') }}">Add A New Industry</a></li>
-                        <li><a class="{{ (request()->routeIs('industries.index')) ? 'active' : '' }}" href="{{ route('industries.index') }}">View All Industries</a></li>
-                    </ul>
-                </li>
                 <li class="submenu" >
                     <a href="#" class="{{ (request()->routeIs('careers.*')) ? 'active' : '' }}" >
                         <i class="fas fa-project-diagram" style='font-size:19px'></i>
@@ -43,6 +20,17 @@
                     <ul style="display: none;">
                         <li><a class="{{ (request()->routeIs('careers.create')) ? 'active' : '' }}" href="{{ route('careers.create') }}">Add A New Career</a></li>
                         <li><a class="{{ (request()->routeIs('careers.index')) ? 'active' : '' }}" href="{{ route('careers.index') }}">View All Careers</a></li>
+                    </ul>
+                </li>
+                <li class="submenu" >
+                    <a href="#" class="{{ (request()->routeIs('portfolio.*')) ? 'active' : '' }}" >
+                        <i class="fas fa-project-diagram" style='font-size:19px'></i>
+                        <span>Portfolio</span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul style="display: none;">
+                        <li><a class="{{ (request()->routeIs('portfolio.create')) ? 'active' : '' }}" href="{{ route('portfolio.create') }}">Add A New Portfolio</a></li>
+                        <li><a class="{{ (request()->routeIs('portfolio.index')) ? 'active' : '' }}" href="{{ route('portfolio.index') }}">View All Portfolio</a></li>
                     </ul>
                 </li>
                 <li class="submenu" >
@@ -68,7 +56,7 @@
                     </ul>
                 </li>
                 <li class="submenu" >
-                    <a href="#" class="{{ (request()->routeIs('services.*')) ? 'active' : '' }} {{ (request()->routeIs('sections.*')) ? 'active' : '' }}" >
+                    <a href="#" class="{{ (request()->routeIs('services.*')) ? 'active' : '' }}" >
                         <i class="fas fa-project-diagram" style='font-size:19px'></i>
                         <span>Services</span>
                         <span class="menu-arrow"></span>

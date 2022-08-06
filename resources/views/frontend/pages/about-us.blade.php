@@ -1,15 +1,15 @@
 @extends('frontend.layouts.layout')
 
 @section('head')
-<title>About us | Titanium</title>
-<meta name="description" content="Titanium">
-<meta name="keywords" content="Titanium">
+<title>About us | Cloudily</title>
+<meta name="description" content="Cloudily">
+<meta name="keywords" content="Cloudily">
 
 @endsection
 
 @section('content')
  <!--======= Breadcrumb Left With BG Image =======-->
- <section class="overview-block-ptb iq-over-black-70 jarallax iq-breadcrumb3 text-left iq-font-white" style="background-image: url('images/bg/03.jpg'); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+ <section class="overview-block-ptb iq-over-black-70 jarallax iq-breadcrumb3 text-left iq-font-white" style="background-image: url('{{ asset('/images/imprint-2508603_1920.jpg') }}'); background-position: center center; background-repeat: no-repeat; background-size: cover;">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-8">
@@ -20,8 +20,8 @@
             <div class="col-lg-4">
                 <nav aria-label="breadcrumb" class="text-right">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="home-1.html"><i class="ion-android-home"></i> Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">About Us 2</li>
+                        <li class="breadcrumb-item"><a href="{{ route('pages.home') }}"><i class="ion-android-home"></i> Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">About Us</li>
                     </ol>
                 </nav>
             </div>
@@ -35,37 +35,39 @@
             <div class="row">
                 <div class="col-lg-6 col-sm-12 iq-best-box">
                     <h3 class="small-title iq-tw-6">We Are Best</h3>
-                    <p> Lorem Ipsum is simply dummy text ever sincehar the 1500s, when an unknownshil printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries. Simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <p> Lorem Ipsum is simply dummy text ever sincehar the 1500s, when an unknownshil printer took.</p>
-                    <a class="button" href="#" role="button">Read More</a>
+                    <p class="paragraph">Cloudily offers software development consulting services for businesses, startups, and enterprises. Partner with a reliable software development company to scale up your engineering capacity.
+                        The seasoned professionals and industry veterans that lead our teams and departments. Cloudily is driven by the profound experience and business acumen that these gifted individuals share with us every day.
+                    </p>
+                    <a class="button" href="{{ route('pages.home') }}" role="button">Read More</a>
                 </div>
                 <div class="col-lg-6 col-sm-12 iq-re-9-mt50">
-                    <img class="img-fluid center-block" src="images/bg/03.jpg" alt="">
+                    <img class="img-fluid center-block" src="{{ asset('/images/marvin-meyer-SYTO3xs06fU-unsplash-min.jpg') }}" alt="">
                 </div>
             </div>
         </div>
     </section>
-    <section class="overview-block-ptb iq-over-black-80 iq-bg jarallax" style="background-image: url('images/bg/26.jpg'); background-position: left center;">
+    <section class="overview-block-ptb iq-over-black-80 iq-bg jarallax" style="background-image: url('{{ asset('/images/marvin-meyer-SYTO3xs06fU-unsplash-min.jpg') }}'); background-position: left center;">
         <div class="container">
             <div class="row iq-font-white">
                 <div class="col-lg-6 col-sm-12 iq-mtb-15">
                     <div class="row">
                         <div class="col-sm-7">
                             <h4 class="iq-tw-6 small-title iq-font-white">Our Mission</h4>
-                            <p>Standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                            <div class="read-more white"><a href="#">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div>
+                            <p>As a constantly-evolving tech company, we are committed to serving the needs of customers around the world by making best software that is
+                                easy to use, powerful and accessible.
+                                
+                                We will continue to innovative and challenge existing workflows to save significant time in their work processes and designs.</p>
                         </div>
-                        <div class="col-sm-5 iq-re-4-mt30"><img alt="" class="img-fluid brd" src="images/feature/01.jpg"></div>
+                        <div class="col-sm-5 iq-re-4-mt30"><img alt="" class="img-fluid brd" src="{{ asset('/images/vision-2372177_1920.jpg') }}"></div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-sm-12 iq-mtb-15 pl-30 iq-re-4-mt50">
                     <div class="row">
                         <div class="col-sm-7">
                             <h4 class="iq-tw-6 small-title iq-font-white">Our Vision</h4>
-                            <p>Standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                            <div class="read-more white"><a href="#">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div>
+                            <p>To be the first marketing choice of national and international organizations. We are experts in our profession with great market influence, confidence and a good reputation. We aim to achieve the vision of our client’s company or brand and work on strategies aimed to reach satisfication.</p>
                         </div>
-                        <div class="col-sm-5 iq-re-4-mt30"><img alt="" class="img-fluid brd" src="images/feature/02.jpg"></div>
+                        <div class="col-sm-5 iq-re-4-mt30"><img alt="" class="img-fluid brd" src="{{ asset('/images/business-idea-3683781_1920.jpg') }}"></div>
                     </div>
                 </div>
             </div>
@@ -84,107 +86,8 @@
         </div>
     </div>
 
-    
-    <section id="team" class="iq-ptb-80 white-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="heading-title text-center">
-                        <h2 class="title iq-tw-6">Meet Our Team</h2>
-                        <p>Lorem Ipsum is simply dummy text ever sincehar the 1500s, when an unknownshil printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-30">
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="iq-team7 text-center iq-mtb-15">
-                        <div class="team-blog mb-30">
-                            <div class="team-images"> <img class="img-fluid" src="images/team/team1.jpg" alt=""> </div>
-                            <div class="team-description">
-                                <div class="mt-10">+0123 456 789</div>
-                                <div class="text-white">support@qwilo.com</div>
-                            </div>
-                            <div class="team-social">
-                                <ul>
-                                    <li> <a href="#"> <i class="ion-social-facebook-outline"></i> </a> </li>
-                                    <li> <a href="#"> <i class="ion-social-twitter-outline"></i> </a> </li>
-                                    <li> <a href="#"> <i class="ion-social-rss-outline"></i> </a> </li>
-                                    <li> <a href="#"> <i class="ion-social-googleplus-outline"></i> </a> </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h6 class="iq-tw-6 iq-mt-10"><a href="portfolio-single-1.html">Rinks Cooper</a></h6>
-                        <p>CEO, Qwilo</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 iq-re-4-mt30">
-                    <div class="iq-team7 text-center iq-mtb-15">
-                        <div class="team-blog mb-30">
-                            <div class="team-images"> <img class="img-fluid" src="images/team/team2.jpg" alt=""> </div>
-                            <div class="team-description">
-                                <div class="mt-10">+0123 456 789</div>
-                                <div class="text-white">support@qwilo.com</div>
-                            </div>
-                            <div class="team-social">
-                                <ul>
-                                    <li> <a href="#"> <i class="ion-social-facebook-outline"></i> </a> </li>
-                                    <li> <a href="#"> <i class="ion-social-twitter-outline"></i> </a> </li>
-                                    <li> <a href="#"> <i class="ion-social-rss-outline"></i> </a> </li>
-                                    <li> <a href="#"> <i class="ion-social-googleplus-outline"></i> </a> </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h6 class="iq-tw-6 iq-mt-10"><a href="portfolio-single-1.html">JD Scot</a></h6>
-                        <p>CEO, Qwilo</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 iq-re-9-mt30">
-                    <div class="iq-team7 text-center iq-mtb-15">
-                        <div class="team-blog mb-30">
-                            <div class="team-images"> <img class="img-fluid" src="images/team/team3.jpg" alt=""> </div>
-                            <div class="team-description">
-                                <div class="mt-10">+0123 456 789</div>
-                                <div class="text-white">support@qwilo.com</div>
-                            </div>
-                            <div class="team-social">
-                                <ul>
-                                    <li> <a href="#"> <i class="ion-social-facebook-outline"></i> </a> </li>
-                                    <li> <a href="#"> <i class="ion-social-twitter-outline"></i> </a> </li>
-                                    <li> <a href="#"> <i class="ion-social-rss-outline"></i> </a> </li>
-                                    <li> <a href="#"> <i class="ion-social-googleplus-outline"></i> </a> </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h6 class="iq-tw-6 iq-mt-10"><a href="portfolio-single-1.html">Haris Morgan</a></h6>
-                        <p>CEO, Qwilo</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 iq-re-9-mt30">
-                    <div class="iq-team7 text-center iq-mtb-15">
-                        <div class="team-blog mb-30">
-                            <div class="team-images"> <img class="img-fluid" src="images/team/team4.jpg" alt=""> </div>
-                            <div class="team-description">
-                                <div class="mt-10">+0123 456 789</div>
-                                <div class="text-white">support@qwilo.com</div>
-                            </div>
-                            <div class="team-social">
-                                <ul>
-                                    <li> <a href="#"> <i class="ion-social-facebook-outline"></i> </a> </li>
-                                    <li> <a href="#"> <i class="ion-social-twitter-outline"></i> </a> </li>
-                                    <li> <a href="#"> <i class="ion-social-rss-outline"></i> </a> </li>
-                                    <li> <a href="#"> <i class="ion-social-googleplus-outline"></i> </a> </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h6 class="iq-tw-6 iq-mt-10"><a href="portfolio-single-1.html">JD Scot</a></h6>
-                        <p>CEO, Qwilo</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section>
+    {{-- <section>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -193,7 +96,7 @@
                 </div>
             </div>
         </div>
-        <div class="iq-pt-50 iq-pb-30 iq-over-black-80 iq-bg jarallax iq-count-classic" style="background-image: url('images/bg/36.jpg'); background-position: left center;">
+        <div class="iq-pt-50 iq-pb-30 iq-over-black-80 iq-bg jarallax iq-count-classic" style="background-image: url('{{ asset('/images/devops-3155972-min.jpg') }}'); background-position: left center;">
             <div class="container">
                 <div class="row iq-counter3">
                     <div class="col-lg-3 col-md-6 col-sm-6">
@@ -235,38 +138,41 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
-    <section class="iq-bg iq-font-white iq-over-black-80 jarallax">
-        <div class="container-fluid">
-            <div class="row row-eq-height" style="justify-content: center">
-                <div class="col-md-12 iq-pall-60 grey-bg iq-testimonial4">
-                    <div id="testimonial-slider" class="owl-carousel owl-theme owl-loaded" data-autoplay="true" data-loop="true" data-nav="false" data-dots="true" data-items="2" data-items-laptop="2" data-items-tab="2" data-items-mobile="2" data-items-mobile-sm="2" data-margin="15">
-                        <div class="testimonial">
-                            <p class="description">
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                            </p>
-                            <h6 class="iq-tw-6">Rinks Cooper</h6>
-                            <span>CEO, Qwilo</span>
-                        </div>
-                        <div class="testimonial">
-                            <p class="description">
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                            </p>
-                            <h6 class="iq-tw-6">JD Scot</h6>
-                            <span>CEO, Qwilo</span>
-                        </div>
-                        <div class="testimonial">
-                            <p class="description">
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                            </p>
-                            <h6 class="iq-tw-6">Haris Morgan</h6>
-                            <span>CEO, Qwilo</span>
-                        </div>
-                    </div>
+    {{-- @if (count($testimonials))
+        <div class="overview-block-pt iq-over-black-80 iq-pb-120 iq-testimonial iq-bg jarallax" style="background-image: url('{{ asset('/images/pexels-mikhail-nilov-7988238-min.jpg') }}'); background-position: center bottom;">
+            <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                <div class="heading-title text-center">
+                    <h2 class="title iq-tw-6 text-white">Testimonial</h2>
+                </div>
                 </div>
             </div>
+            <div class="row iq-mt-10">
+                <div class="col-lg-12 col-md-12">
+                <div class="owl-carousel" data-autoplay="true" data-loop="true" data-nav="false" data-dots="true" data-items="3" data-items-laptop="3" data-items-tab="2" data-items-mobile="1" data-items-mobile-sm="1" data-margin="15">
+                    @foreach ($testimonials as $testimony)
+                        <div class="item">
+                            <div class="feedback">
+                                <div class="iq-info bg-light">
+                                <p>{{ $testimony->message }}</p>
+                                </div>
+                                <div class="iq-mt-30">
+                                <div class="iq-avtar iq-mr-20"> <img alt="" class="img-fluid center-block" src="{{ asset('/storage/' . $testimony->image) }}"></div>
+                                <div class="avtar-name">
+                                    <div class="iq-lead iq-mb-0 iq-tw-6 iq-font-green">{{ $testimony->name }}</div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+                </div>
+            </div>
+            </div>
         </div>
-    </section>
+    @endif --}}
 </div>
 @endsection

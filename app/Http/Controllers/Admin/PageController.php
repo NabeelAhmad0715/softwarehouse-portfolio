@@ -7,7 +7,7 @@ use App\Admin;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Career;
-use App\Industry;
+use App\Portfolio;
 use App\Blog;
 use App\LatestNew;
 use App\Service;
@@ -22,13 +22,13 @@ class PageController extends Controller
      */
     public function index()
     {
-        $industries = Industry::all()->count();
-        $careers = Career::all()->count();
+        $jobs = Career::all()->count();
         $latestNews = LatestNew::all()->count();
         $blogs = Blog::all()->count();
-        $services = Service::all()->count();
+        $servicesCount = Service::all()->count();
+        $portfolio = Portfolio::all()->count();
         $testimonials = Testimonial::all()->count();
-        return view('admin.pages.home', compact( 'industries', 'careers', 'latestNews', 'blogs', 'services', 'testimonials'));
+        return view('admin.pages.home', compact('portfolio', 'jobs', 'latestNews', 'blogs', 'servicesCount', 'testimonials'));
     }
     public function editProfile()
     {

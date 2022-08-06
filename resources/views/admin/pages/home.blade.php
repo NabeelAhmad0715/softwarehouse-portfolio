@@ -34,14 +34,14 @@
                                 <i class="fe fe-users"></i>
                             </span>
                             <div class="dash-count">
-                                <h3>{{ $industries }}</h3>
+                                <h3>{{ $portfolio }}</h3>
                             </div>
                         </div>
                         <div class="dash-widget-info">
 
-                            <h6 class="text-muted"><a href="{{ route('industries.index') }}">Industries</a></h6>
+                            <h6 class="text-muted"><a href="{{ route('portfolio.index') }}">Portfolio</a></h6>
                             <div class="progress progress-sm">
-                                <div class="progress-bar bg-success" style="width:{{ ($industries/100) * 100 }}%"></div>
+                                <div class="progress-bar bg-success" style="width:{{ ($portfolio/100) * 100 }}%"></div>
                             </div>
                         </div>
                     </div>
@@ -55,14 +55,14 @@
                                 <i class="fe fe-users"></i>
                             </span>
                             <div class="dash-count">
-                                <h3>{{ $careers }}</h3>
+                                <h3>{{ $jobs }}</h3>
                             </div>
                         </div>
                         <div class="dash-widget-info">
 
                             <h6 class="text-muted"><a href="{{ route('careers.index') }}">Careers</a></h6>
                             <div class="progress progress-sm">
-                                <div class="progress-bar bg-success" style="width:{{ ($careers/100) * 100 }}%"></div>
+                                <div class="progress-bar bg-success" style="width:{{ ($jobs/100) * 100 }}%"></div>
                             </div>
                         </div>
                     </div>
@@ -118,14 +118,14 @@
                                 <i class="fe fe-users"></i>
                             </span>
                             <div class="dash-count">
-                                <h3>{{ $services }}</h3>
+                                <h3>{{ $servicesCount }}</h3>
                             </div>
                         </div>
                         <div class="dash-widget-info">
 
-                            <h6 class="text-muted"><a href="{{ route('services.index') }}">Services</a></h6>
+                            <h6 class="text-muted"><a href="{{ route('services.index') }}">servicesCount</a></h6>
                             <div class="progress progress-sm">
-                                <div class="progress-bar bg-success" style="width:{{ ($services/100) * 100 }}%"></div>
+                                <div class="progress-bar bg-success" style="width:{{ ($servicesCount/100) * 100 }}%"></div>
                             </div>
                         </div>
                     </div>

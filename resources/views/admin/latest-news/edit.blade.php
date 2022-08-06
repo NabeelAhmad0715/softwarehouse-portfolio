@@ -76,7 +76,7 @@
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <label class="@error('published_date') text-danger @enderror">Published Date <span style="color:red">*</span> </label>
-                                        <input type="date" class="@error('published_date') border-danger @enderror form-control" value="{{ old('published_date', $latestNews->published_date) }}" name="published_date" required >
+                                        <input type="date" class="@error('published_date') border-danger @enderror form-control" value="{{ old('published_date', $latestNews->published_date->format('Y-m-d')) }}" name="published_date" required >
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-12">

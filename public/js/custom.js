@@ -1,6 +1,6 @@
 /*
 
-Template: Qwilo - Multipurpose Responsive HTML5 Template
+Template: Cloudily - Multipurpose Responsive HTML5 Template
 Author: iqonicthemes.in
 Version: 3.0
 

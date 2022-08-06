@@ -41,12 +41,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin', "namespace" => 
     Route::resource('blog/{blog}/sections', 'SectionController');
     // Services
     Route::resource('services', 'ServiceController');
-    // Industries
-    Route::resource('industries', 'IndustryController');
     // Testimonials
     Route::resource('testimonials', 'TestimonialController');
-    //Maps
-    Route::resource('maps', 'MapController');
+    //portfolio
+    Route::resource('portfolio', 'PortfolioController');
 
     // Contact Inquiries
     Route::get('/general-settings/create', "GeneralSettingController@create")->name("general-settings.create")->middleware('admin-master-user');

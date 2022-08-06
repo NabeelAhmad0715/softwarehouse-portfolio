@@ -84,8 +84,9 @@ class LatestNewController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(Request $request, LatestNew $latestNew)
+    public function update(Request $request, $latestNew)
     {
+        $latestNew = LatestNew::find($latestNew);
         $data = $request->validate([
             'title' => ['required', 'string', 'max:255'],
             'published_date' => ['required', 'date'],
@@ -121,8 +122,9 @@ class LatestNewController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(LatestNew $latestNew)
+    public function destroy($latestNew)
     {
+        $latestNew = LatestNew::find($latestNew);
         $latestNew->delete();
         return redirect()->back()->with('success', 'Latest News deleted successfully.');
     }
